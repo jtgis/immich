@@ -36,12 +36,12 @@ generate_random_password() {
 start_docker_compose() {
   echo "Starting Immich's docker containers"
 
-  if ! docker compose >/dev/null 2>&1; then
+  if ! docker-compose >/dev/null 2>&1; then
     echo "failed to find 'docker compose'"
     return 1
   fi
 
-  if ! docker compose up --remove-orphans -d; then
+  if ! docker-compose up --remove-orphans -d; then
     echo "Could not start. Check for errors above."
     return 1
   fi
