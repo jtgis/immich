@@ -15,7 +15,7 @@ create_immich_directory() {
 
 download_docker_compose_file() {
   echo "Downloading docker-compose.yml..."
-  "${Curl[@]}" "$RepoUrl"/docker-compose.yml -o ./docker-compose.yml
+  "${Curl[@]}" https://raw.githubusercontent.com/jtgis/immich/main/docker/docker-compose.yml -o ./docker-compose.yml
 }
 
 download_dot_env_file() {
